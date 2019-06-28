@@ -39,7 +39,8 @@
             this.FourButton = new System.Windows.Forms.Button();
             this.NineButton = new System.Windows.Forms.Button();
             this.EightButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ResultLabel = new System.Windows.Forms.Label();
+            this.EqualButton = new System.Windows.Forms.Button();
             this.NumberButtonTableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             this.SevenButton.TabIndex = 0;
             this.SevenButton.Text = "7";
             this.SevenButton.UseVisualStyleBackColor = false;
+            this.SevenButton.Click += new System.EventHandler(this.CalculatorButtons_Click);
             // 
             // NumberButtonTableLayout
             // 
@@ -63,6 +65,7 @@
             this.NumberButtonTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.NumberButtonTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.NumberButtonTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.NumberButtonTableLayout.Controls.Add(this.EqualButton, 2, 3);
             this.NumberButtonTableLayout.Controls.Add(this.ZeroButton, 1, 3);
             this.NumberButtonTableLayout.Controls.Add(this.ThreeButton, 2, 2);
             this.NumberButtonTableLayout.Controls.Add(this.TwoButton, 1, 2);
@@ -96,6 +99,7 @@
             this.ZeroButton.TabIndex = 10;
             this.ZeroButton.Text = "0";
             this.ZeroButton.UseVisualStyleBackColor = false;
+            this.ZeroButton.Click += new System.EventHandler(this.CalculatorButtons_Click);
             // 
             // ThreeButton
             // 
@@ -110,6 +114,7 @@
             this.ThreeButton.TabIndex = 9;
             this.ThreeButton.Text = "3";
             this.ThreeButton.UseVisualStyleBackColor = false;
+            this.ThreeButton.Click += new System.EventHandler(this.CalculatorButtons_Click);
             // 
             // TwoButton
             // 
@@ -124,6 +129,7 @@
             this.TwoButton.TabIndex = 8;
             this.TwoButton.Text = "2";
             this.TwoButton.UseVisualStyleBackColor = false;
+            this.TwoButton.Click += new System.EventHandler(this.CalculatorButtons_Click);
             // 
             // OneButton
             // 
@@ -138,6 +144,7 @@
             this.OneButton.TabIndex = 7;
             this.OneButton.Text = "1";
             this.OneButton.UseVisualStyleBackColor = false;
+            this.OneButton.Click += new System.EventHandler(this.CalculatorButtons_Click);
             // 
             // SixButton
             // 
@@ -152,6 +159,7 @@
             this.SixButton.TabIndex = 6;
             this.SixButton.Text = "6";
             this.SixButton.UseVisualStyleBackColor = false;
+            this.SixButton.Click += new System.EventHandler(this.CalculatorButtons_Click);
             // 
             // FiveButton
             // 
@@ -166,6 +174,7 @@
             this.FiveButton.TabIndex = 5;
             this.FiveButton.Text = "5";
             this.FiveButton.UseVisualStyleBackColor = false;
+            this.FiveButton.Click += new System.EventHandler(this.CalculatorButtons_Click);
             // 
             // FourButton
             // 
@@ -180,6 +189,7 @@
             this.FourButton.TabIndex = 4;
             this.FourButton.Text = "4";
             this.FourButton.UseVisualStyleBackColor = false;
+            this.FourButton.Click += new System.EventHandler(this.CalculatorButtons_Click);
             // 
             // NineButton
             // 
@@ -194,6 +204,7 @@
             this.NineButton.TabIndex = 3;
             this.NineButton.Text = "9";
             this.NineButton.UseVisualStyleBackColor = false;
+            this.NineButton.Click += new System.EventHandler(this.CalculatorButtons_Click);
             // 
             // EightButton
             // 
@@ -208,17 +219,33 @@
             this.EightButton.TabIndex = 2;
             this.EightButton.Text = "8";
             this.EightButton.UseVisualStyleBackColor = false;
+            this.EightButton.Click += new System.EventHandler(this.CalculatorButtons_Click);
             // 
-            // label1
+            // ResultLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(769, 66);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ResultLabel.BackColor = System.Drawing.Color.White;
+            this.ResultLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ResultLabel.Location = new System.Drawing.Point(3, 6);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(769, 66);
+            this.ResultLabel.TabIndex = 11;
+            this.ResultLabel.Text = "0";
+            this.ResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // EqualButton
+            // 
+            this.EqualButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EqualButton.BackColor = System.Drawing.Color.LimeGreen;
+            this.EqualButton.ForeColor = System.Drawing.Color.White;
+            this.EqualButton.Location = new System.Drawing.Point(518, 321);
+            this.EqualButton.Name = "EqualButton";
+            this.EqualButton.Size = new System.Drawing.Size(253, 100);
+            this.EqualButton.TabIndex = 12;
+            this.EqualButton.Text = "=";
+            this.EqualButton.UseVisualStyleBackColor = false;
+            this.EqualButton.Click += new System.EventHandler(this.CalculatorButtons_Click);
             // 
             // Lesson9Form
             // 
@@ -226,7 +253,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 531);
             this.Controls.Add(this.NumberButtonTableLayout);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ResultLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.Name = "Lesson9Form";
@@ -250,7 +277,8 @@
         private System.Windows.Forms.Button ThreeButton;
         private System.Windows.Forms.Button TwoButton;
         private System.Windows.Forms.Button ZeroButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ResultLabel;
+        private System.Windows.Forms.Button EqualButton;
     }
 }
 
