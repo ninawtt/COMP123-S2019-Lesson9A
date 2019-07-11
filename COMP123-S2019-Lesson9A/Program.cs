@@ -16,7 +16,7 @@ namespace COMP123_S2019_Lesson9A
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Lesson9Form());
+            Application.Run(new CalculateForm());
         }
     }
 }
