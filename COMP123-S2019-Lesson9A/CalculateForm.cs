@@ -60,7 +60,6 @@ namespace COMP123_S2019_Lesson9A
             Button TheButton = sender as Button;
             var tag = TheButton.Tag.ToString();
             int numericValue = 0;
-
             bool numericResult = int.TryParse(tag, out numericValue);
 
             if(numericResult)
@@ -78,8 +77,6 @@ namespace COMP123_S2019_Lesson9A
                         outputString += tag;
                     }
                 }
-                    
-
                 ResultLabel.Text = outputString;
             }
             else
@@ -93,7 +90,7 @@ namespace COMP123_S2019_Lesson9A
                         finalizeOutput();
                         break;
                     case "clear":
-                        ClearNumericKeyboard();
+                        clearNumericKeyboard();
                         break;
                     case "decimal":
                         addDecimalToResultLabel();
@@ -103,7 +100,7 @@ namespace COMP123_S2019_Lesson9A
         }
 
         /// <summary>
-        /// This method adds a decimal point to the resultLabel
+        /// This method adds a decimal point to the ResultLabel
         /// </summary>
         private void addDecimalToResultLabel()
         {
@@ -114,7 +111,7 @@ namespace COMP123_S2019_Lesson9A
             }
         }
         /// <summary>
-        /// This method finalizes and converts the outputString to a floating point 
+        /// This method finalizes and converts the outputString to a floating point values
         /// </summary>
         private void finalizeOutput()
         {
@@ -134,11 +131,11 @@ namespace COMP123_S2019_Lesson9A
                 outputValue = 0.1f;
             }
             HeightLabel.Text = outputValue.ToString();
-            ClearNumericKeyboard();
+            clearNumericKeyboard();
             NumberButtonTableLayoutPanel.Visible = false;
         }
         /// <summary>
-        /// 
+        ///  This method removes the last character from the ResultLabel  
         /// </summary>
         private void removeLastCharacterFromResultLabel()
         {
@@ -158,9 +155,9 @@ namespace COMP123_S2019_Lesson9A
         }
 
         /// <summary>
-        /// This method resets the numeric keyboard and related va
+        /// This method resets the numeric keyboard and related variables 
         /// </summary>
-        private void ClearNumericKeyboard()
+        private void clearNumericKeyboard()
         {
             ResultLabel.Text = "0";
             outputString = "0";
@@ -174,12 +171,12 @@ namespace COMP123_S2019_Lesson9A
         /// <param name="e"></param>
         private void CalculateForm_Load(object sender, EventArgs e)
         {
-            ClearNumericKeyboard();
+            clearNumericKeyboard();
             NumberButtonTableLayoutPanel.Visible = false;
         }
 
         /// <summary>
-        /// This is the event handler for the heightLabel click event
+        /// This is the event handler for the HeightLabel click event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

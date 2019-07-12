@@ -334,11 +334,11 @@
             this.HeightLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HeightLabel.Location = new System.Drawing.Point(1, 0);
             this.HeightLabel.Name = "HeightLabel";
-            this.HeightLabel.Size = new System.Drawing.Size(287, 72);
+            this.HeightLabel.Size = new System.Drawing.Size(105, 72);
             this.HeightLabel.TabIndex = 12;
             this.HeightLabel.Tag = "height";
             this.HeightLabel.Text = "0";
-            this.HeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.HeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HeightLabel.Click += new System.EventHandler(this.HeightLabel_Click);
             // 
             // CalculateForm
@@ -349,7 +349,9 @@
             this.Controls.Add(this.HeightLabel);
             this.Controls.Add(this.NumberButtonTableLayoutPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.MaximizeBox = false;
             this.Name = "CalculateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
